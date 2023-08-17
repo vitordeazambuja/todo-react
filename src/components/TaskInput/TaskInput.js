@@ -1,18 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./TaskInput.css";
 
 export default function TaskInput(props) {
-  // useState variables
-  const [inputValue, setInputValue] = useState("");
-  
   // functions
   const handleInputChange = (e) => {
-    setInputValue(e.target.value);
+    props.onChange(e.target.value);
   };
 
-  const handleInputAdd = (e) => {
-    props.onAdd(inputValue);
-    setInputValue("");
+  const handleInputAdd = (todo) => {
+    props.onAdd(props.todo);
   };
 
   // return statement
@@ -22,7 +18,6 @@ export default function TaskInput(props) {
         type="text"
         placeholder="Type a task"
         onChange={handleInputChange}
-        value={inputValue}
       ></input>
       <button onClick={handleInputAdd}>Add</button>
     </div>

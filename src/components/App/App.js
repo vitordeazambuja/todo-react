@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <h1>To Do App</h1>
-      <TaskInput onChange={onChange} onAdd={onAdd} />
+      <TaskInput todo={todo} onChange={onChange} onAdd={onAdd} />
       <h2>Todo:{todo}</h2>
       <Tasklist todoList={todoList} />
       <TaskDone />
