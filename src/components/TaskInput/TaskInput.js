@@ -15,12 +15,16 @@ export default function TaskInput(props) {
   return (
     <div className="TaskInput">
       <input
+        className="todo-input"
         type="text"
         placeholder="Type a task"
         onChange={handleInputChange}
         value={props.todo}
+        maxLength={50}
       ></input>
-      <button onClick={handleInputAdd}>Add</button>
+      <button className="todo-btn" onClick={handleInputAdd}>
+        Add
+      </button>
     </div>
   );
 }

@@ -1,4 +1,19 @@
-.todoItem{
-    display: flex;
-    flex-direction: row;
+.todoItem {
+  display: flex;
+  flex-direction: row;
+  background-color: #918f8fd3;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  align-items: center;
+  padding: 0.75rem;
+  font-size: 20px;
+}
+.todo-description {
+  margin-right: 0.75rem;
+}
+.checkbox{
+    height: 25px;
+    width: 25px;
 }

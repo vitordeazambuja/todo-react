@@ -40,8 +40,10 @@ function App() {
   // return statement
   return (
     <div className="App">
-      <h1>To Do App</h1>
-      <TaskInput todo={todo} onChange={onChange} onAdd={onAdd} />
+      <div className="container-head">
+        <h1 className="title">To Do App</h1>
+        <TaskInput todo={todo} onChange={onChange} onAdd={onAdd} />
+      </div>
       <Tasklist
         todoList={todoList}
         onCheck={onCheck}
