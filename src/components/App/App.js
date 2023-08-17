@@ -19,14 +19,20 @@ function App() {
     setTodoList([...todoList, todo]);
   };
 
+  const onCheck = (index) => {
+    const completedTodo = todoList[index];
+    setTodoList(todoList.filter((never, i) => i !== index));
+    setDoneList([...doneList, completedTodo]);
+  };
+
   // return statement
   return (
     <div className="App">
       <h1>To Do App</h1>
       <TaskInput todo={todo} onChange={onChange} onAdd={onAdd} />
       <h2>Todo:{todo}</h2>
-      <Tasklist todoList={todoList} />
-      <TaskDone />
+      <Tasklist todoList={todoList} onCheck={onCheck} />
+      <TaskDone doneList={doneList} />
     </div>
   );
 }
