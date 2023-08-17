@@ -18,6 +18,7 @@ export default function TaskInput(props) {
         type="text"
         placeholder="Type a task"
         onChange={handleInputChange}
+        value={props.todo}
       ></input>
       <button onClick={handleInputAdd}>Add</button>
     </div>

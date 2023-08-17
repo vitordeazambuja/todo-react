@@ -16,7 +16,10 @@ function App() {
   };
 
   const onAdd = (todo) => {
-    setTodoList([...todoList, todo]);
+    if(todo.trim() !== ""){
+      setTodoList([...todoList, todo]);
+      setTodo("");
+    }
   };
 
   const onCheck = (index) => {
