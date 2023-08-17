@@ -9,7 +9,7 @@ export default function TaskDone(props) {
         return (
           <div className="todoItem" key={i}>
             <h3>{todo}</h3>
-            <input type="checkbox" checked readOnly></input>
+            <p>✅</p>
           </div>
         );
       })}

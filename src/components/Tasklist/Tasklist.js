@@ -9,7 +9,11 @@ export default function Tasklist(props) {
         return (
           <div className="todoItem" key={i}>
             <h3>{todo}</h3>
-            <input type="checkbox" onChange={()=>props.onCheck(i)}></input>
+            <input
+              type="checkbox"
+              onChange={() => props.onCheck(i)}
+              checked={props.lastCheckedIndex === i}
+            ></input>
           </div>
         );
       })}
